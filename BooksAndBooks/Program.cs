@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -130,10 +130,18 @@ namespace BooksAndBooks
 
             Console.ReadKey();
 
-            int booksgoing = 3;
+            Console.WriteLine("\nAre you sure?");
 
-            for(int i = 0; i < booksgoing; i++)
+            Console.WriteLine();
+
+            Console.ReadKey();
+
+            while (bookstack.Count > 0) 
             {
+                Console.WriteLine("========================================="+
+                                  "\nBook borrowed");
+                Book a = bookstack.Peek();
+                a.Print();
                 bookstack.Pop();
             }
 
